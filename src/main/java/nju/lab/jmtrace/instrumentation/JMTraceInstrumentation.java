@@ -58,6 +58,7 @@ public class JMTraceInstrumentation {
         String objClassName = null;
         if (array == null) objClassName = "NULL";
         else objClassName = array.getClass().getCanonicalName();
+        objClassName = objClassName.substring(0, objClassName.length() - 2); // int[] -> int
         System.out.println(" " + objClassName + "[" + index + "]");
     }
 
@@ -72,6 +73,7 @@ public class JMTraceInstrumentation {
         String objClassName = null;
         if (array == null) objClassName = "NULL";
         else objClassName = array.getClass().getCanonicalName();
+        objClassName = objClassName.substring(0, objClassName.length() - 2); // int[] -> int
         System.out.println(" " + objClassName + "[" + index + "]");
     }
 
