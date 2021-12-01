@@ -1,4 +1,4 @@
-package util;
+package nju.lab.jmtrace.util;
 
 public class JavaUtil {
     public static boolean isJavaLibraryClass(String className) {
@@ -31,5 +31,19 @@ public class JavaUtil {
             default:
                 return -1;
         }
+    }
+
+    /**
+     * e.g., [Ljava/lang/String  ->  java.lang.String
+     * [[Ljava/lang/Strnig  ->  java.lang.String[]
+     */
+    public static String arrayDesc2Name(String descriptor) {
+        if (descriptor == null || descriptor.length() <= 1) {
+            return new String();
+        }
+        int dim = 0;
+        //for (int i = 1; i < descriptor.size)
+        // TODO
+        return null;
     }
 }

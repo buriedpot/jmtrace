@@ -1,4 +1,4 @@
-package instrumentation;
+package nju.lab.jmtrace.instrumentation;
 
 public class JMTraceInstrumentation {
     /**
@@ -55,7 +55,10 @@ public class JMTraceInstrumentation {
     synchronized public static void instr_ALOAD(Object array, int index) {
         System.out.print("R " + Thread.currentThread().getId() + " ");
         System.out.printf("%016x", System.identityHashCode(array));
-        System.out.println(" " + array.getClass() + "[" + index + "]");
+        String objClassName = null;
+        if (array == null) objClassName = "NULL";
+        else objClassName = array.getClass().getCanonicalName();
+        System.out.println(" " + objClassName + "[" + index + "]");
     }
 
     /**
@@ -66,7 +69,10 @@ public class JMTraceInstrumentation {
     synchronized public static void instr_ASTORE(Object array, int index) {
         System.out.print("W " + Thread.currentThread().getId() + " ");
         System.out.printf("%016x", System.identityHashCode(array));
-        System.out.println(" " + array.getClass() + "[" + index + "]");
+        String objClassName = null;
+        if (array == null) objClassName = "NULL";
+        else objClassName = array.getClass().getCanonicalName();
+        System.out.println(" " + objClassName + "[" + index + "]");
     }
 
 }

@@ -1,10 +1,8 @@
-package visitor;
+package nju.lab.jmtrace.visitor;
 
 import org.objectweb.asm.ClassVisitor;
-import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
-import util.JavaUtil;
 
 public class JMTraceClassVisitor extends ClassVisitor {
 

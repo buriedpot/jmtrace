@@ -1,10 +1,10 @@
-package visitor;
+package nju.lab.jmtrace.visitor;
 
-import instrumentation.JMTraceInstrumentation;
+import nju.lab.jmtrace.instrumentation.JMTraceInstrumentation;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import org.objectweb.asm.Type;
-import util.JavaUtil;
+import nju.lab.jmtrace.util.JavaUtil;
 
 import static org.objectweb.asm.Opcodes.*;
 
