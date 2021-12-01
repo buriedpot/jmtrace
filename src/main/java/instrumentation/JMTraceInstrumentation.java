@@ -1,9 +1,6 @@
 package instrumentation;
 
 public class JMTraceInstrumentation {
-    public static int R = 0;
-    public static int W = 1;
-
     /**
      * instrumentation for getfield
      * @param object, the receive object of get field

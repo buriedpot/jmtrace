@@ -8,10 +8,6 @@ import util.JavaUtil;
 
 public class JMTraceClassVisitor extends ClassVisitor {
 
-    public JMTraceClassVisitor(int api, ClassVisitor writer) {
-        super(api, writer);
-    }
-
     public JMTraceClassVisitor(ClassVisitor writer) {
         super(Opcodes.ASM7, writer);
     }

@@ -9,16 +9,9 @@ import util.JavaUtil;
 import static org.objectweb.asm.Opcodes.*;
 
 public class JMTraceMethodVisitor extends MethodVisitor {
-
-    public JMTraceMethodVisitor(int api, MethodVisitor methodVisitor) {
-        super(api, methodVisitor);
-    }
-
-
     public JMTraceMethodVisitor(MethodVisitor methodVisitor) {
         super(Opcodes.ASM7, methodVisitor);
     }
-
 
     @Override
     public void visitInsn(int opcode) {
