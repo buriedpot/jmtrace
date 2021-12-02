@@ -33,9 +33,9 @@ public class JMTraceMethodVisitor extends MethodVisitor {
             /**
              * stack: ..., value3, value2, value1, need to be transformed to
              * ..., value3, value2, value1, value3, value2
-             * value3: 1byte, array reference
-             * value2: 1byte, array index
-             * value1: 2byte, long or double
+             * value3: category 1, 1slot, array reference
+             * value2: category 1, 1slot, array index
+             * value1: category 2, 2slot, long or double
              */
             if (opcode == LASTORE || opcode == DASTORE) {
                 // ..., 3, 2, 1
@@ -46,9 +46,9 @@ public class JMTraceMethodVisitor extends MethodVisitor {
             /**
              * stack: ..., value3, value2, value1, need to be transformed to
              * ..., value3, value2, value1, value3, value2
-             * value3: 1byte, array reference
-             * value2: 1byte, array index
-             * value1: 1byte
+             * value3: category 1, 1slot, array reference
+             * value2: category 1, 1slot, array index
+             * value1: category 1, 1slot
              */
             else {
                 // ..., 3, 2, 1
@@ -108,8 +108,8 @@ public class JMTraceMethodVisitor extends MethodVisitor {
                 }
                 /**
                  * stack: ..., value2, value1. need to be transformed to ..., value2, value1, value2
-                 * value2: category 1
-                 * value1: category 2
+                 * value2: category 1, 1slot
+                 * value1: category 2, 2slot
                  */
                 else if (category == 2) {
                     //..., 2, 1

@@ -12,6 +12,13 @@ public class JavaUtil {
                 className.startsWith("org/w3c/dom/") ||
                 className.startsWith("jdk/");
     }
+
+    /**
+     * category 1: 1slot, 4byte
+     * category 2: 2slot, 8byte
+     * @param descriptor
+     * @return
+     */
     public static int category(String descriptor) {
         if (descriptor == null) return 0;
         char startChar = descriptor.charAt(0);
