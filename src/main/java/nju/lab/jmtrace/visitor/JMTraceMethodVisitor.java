@@ -91,12 +91,11 @@ public class JMTraceMethodVisitor extends MethodVisitor {
             }
             case GETSTATIC: {
                 mv.visitLdcInsn(owner);
-                mv.visitLdcInsn(owner);
                 mv.visitLdcInsn(name);
                 mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                         Type.getInternalName(JMTraceInstrumentation.class),
                         "instrGetStatic",
-                        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+                        "(Ljava/lang/String;Ljava/lang/String;)V",
                         false);
                 break;
             }
@@ -133,12 +132,11 @@ public class JMTraceMethodVisitor extends MethodVisitor {
             }
             case PUTSTATIC: {
                 mv.visitLdcInsn(owner);
-                mv.visitLdcInsn(owner);
                 mv.visitLdcInsn(name);
                 mv.visitMethodInsn(Opcodes.INVOKESTATIC,
                         Type.getInternalName(JMTraceInstrumentation.class),
                         "instrPutStatic",
-                        "(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V",
+                        "(Ljava/lang/String;Ljava/lang/String;)V",
                         false);
                 break;
             }

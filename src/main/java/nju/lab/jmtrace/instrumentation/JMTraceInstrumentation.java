@@ -16,13 +16,12 @@ public class JMTraceInstrumentation {
     /**
      * instrumentation for getstatic
      * @param className, the class of the static call
-     * @param owner, the class of the receive object
      * @param name, the field name of the receive object
      */
-    synchronized public static void instrGetStatic(String className, String owner, String name) {
+    synchronized public static void instrGetStatic(String className, String name) {
         System.out.print("R " + Thread.currentThread().getId() + " ");
         System.out.printf("%016x", System.identityHashCode(className));
-        System.out.println(" " + owner + "." + name);
+        System.out.println(" " + className + "." + name);
     }
     /**
      * instrumentation for putfield
@@ -38,13 +37,12 @@ public class JMTraceInstrumentation {
     /**
      * instrumentation for putstatic
      * @param className, the class of the static call
-     * @param owner, the class of the receive object
      * @param name, the field name of the receive object
      */
-    synchronized public static void instrPutStatic(String className, String owner, String name) {
+    synchronized public static void instrPutStatic(String className, String name) {
         System.out.print("W " + Thread.currentThread().getId() + " ");
         System.out.printf("%016x", System.identityHashCode(className));
-        System.out.println(" " + owner + "." + name);
+        System.out.println(" " + className + "." + name);
     }
 
     /**
