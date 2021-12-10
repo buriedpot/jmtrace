@@ -26,7 +26,7 @@ cd jmtrace
 mvn clean package
 ```
 
-3. After step 2, you will get a jar under the Maven output directory "target" called "jmtrace-1.0.jar". You can also get a jar under the "target" directory called "jmtrace-1.0-jar-with-dependencies.jar". Execute `java -javaagent:<jmtrace jar path> -jar <your jar> <your arg1> <your arg2> ...` command to execute the ".jar" file to get the result. 
+3. After step 2, you will get a jar under the Maven output directory "target" called "jmtrace-1.0.jar". You can also get a jar under the "target" directory called "jmtrace-1.0-jar-with-dependencies.jar". Execute `java -javaagent:<jmtrace jar path> -jar <your jar> <your arg1> <your arg2> ...` command to execute the ".jar" file to get the result. You can also enter directory "jmtrace" and execute `./jmtrace --jar <your jar> <your arg1> <your arg2> ...`.
 
 **Example**:
 
@@ -52,6 +52,14 @@ public class Hello {
 java -javaagent:"C:\Works\javaworks\ISER_PA2\jmtrace\target\jmtrace-1.0-jar-with-dependencies.jar" -jar C:\Works\javaworks\ISER_PA2\myTest\target\Hello.jar hello world
 # In this case, Hello.jar is your jar and it should have a main class declared.
 ```
+
+​	or enter folder "jmtrace" and execute (if your system is Linux)
+
+```java
+./jmtrace -jar C:\Works\javaworks\ISER_PA2\myTest\target\Hello.jar hello world
+```
+
+​	if you get `Permission denied` error, please enter "jmtrace" folder and execute `chmod +x jmtrace` first.
 
 * output
 
