@@ -26,7 +26,7 @@ cd jmtrace
 mvn clean package
 ```
 
-3. After step 2, you will get a jar under the Maven output directory "target" called "jmtrace-1.0.jar". You can also get a jar under the "target" directory called "jmtrace-1.0-jar-with-dependencies.jar". Execute `java -javaagent:<jmtrace jar path> -jar <your jar> <your arg1> <your arg2> ...` command to execute the ".jar" file to get the result. You can also enter directory "jmtrace" and execute `./jmtrace --jar <your jar> <your arg1> <your arg2> ...`.
+3. After step 2, you will get a jar under the Maven output directory "target" called "jmtrace-1.0.jar". You can also get a jar under the "target" directory called "jmtrace-1.0-jar-with-dependencies.jar". Execute `java -javaagent:<jmtrace jar path> -jar <your jar> <your arg1> <your arg2> ...` command to execute the ".jar" file to get the result. You can also enter directory "jmtrace" and execute `./jmtrace -jar <your jar> <your arg1> <your arg2> ...`.
 
 **Example**:
 
